@@ -3,6 +3,7 @@ import { Activity, ArrowLeft, Clock, Database, HardDrive } from "lucide-react";
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { buttonVariants } from "@/components/ui/button";
+import type { Metadata } from "next";
 
 type StatusResponse = {
   updated_at: string;
@@ -13,6 +14,10 @@ type StatusResponse = {
       opened_connections: number;
     };
   };
+};
+
+export const metadata: Metadata = {
+  title: "Auge Motos | Status do Sistema",
 };
 
 async function getStatus(): Promise<StatusResponse> {

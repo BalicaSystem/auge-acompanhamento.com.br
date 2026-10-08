@@ -7,6 +7,12 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Auge Motos | Sistema",
+  description: "Sistema de acompanhemto de motocicletas no estoque",
+};
 
 export default function Home() {
   return (
