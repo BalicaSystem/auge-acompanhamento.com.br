@@ -1,3 +1,4 @@
+import { Button, buttonVariants } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -5,6 +6,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -19,13 +21,19 @@ export default function Home() {
 
         <CardContent>
           <div className="rounded-lg border bg-background p-4">
-            <p className="text-sm text-muted-foreground">
-              Status do acompanhamento
-            </p>
-
             <div className="mt-2 flex items-center gap-2">
               <span className="h-2.5 w-2.5 rounded-full bg-green-500" />
-              <span className="font-medium">Ativo</span>
+              <span className="font-medium">Em construção</span>
+            </div>
+            <div className="mt-2">
+              <Link
+                href={"/status"}
+                className={buttonVariants({
+                  variant: "secondary",
+                })}
+              >
+                Ver Status
+              </Link>
             </div>
           </div>
         </CardContent>
